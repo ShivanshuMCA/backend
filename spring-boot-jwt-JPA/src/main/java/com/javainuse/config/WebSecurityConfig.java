@@ -63,7 +63,7 @@ public class WebSecurityConfig
         // We don't need CSRF for this example
         httpSecurity.cors().and().csrf().disable()
                 // dont authenticate this particular request
-                .authorizeRequests().antMatchers( "/login", "/register", "/admin/", "/verifyUserName/**" , "/hello", "/api/staff/**").permitAll().
+                .authorizeRequests().antMatchers( "/login", "/register", "/admin/", "/verifyUserName/**" , "/hello", "/api/staff/**","/api/order/**").permitAll().
                 // all other requests need to be authenticated
                 anyRequest().authenticated().and().
                 // make sure we use stateless session; session won't be used to

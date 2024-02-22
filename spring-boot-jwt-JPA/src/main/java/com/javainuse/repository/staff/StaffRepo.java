@@ -10,6 +10,8 @@ import com.javainuse.model.staff.Staff;
 @Repository
 public interface StaffRepo extends JpaRepository<Staff, Long> {
 
+	List<Staff> findByShift(String shift);
+
 //	List<Staff> findAllByShiftId(Long shiftId);
 
 }

@@ -19,7 +19,6 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.javainuse.model.staff.Staff;
 import com.javainuse.model.staff.StaffDto;
-import com.javainuse.model.staff.StaffRole;
 import com.javainuse.service.staff.StaffService;
 
 @RestController
@@ -31,9 +30,9 @@ public class StaffController {
 	private StaffService staffService;
 
 	@GetMapping("/available")
-	public List<StaffRole> getAvailableStaff(@RequestParam Long shiftId) {
+	public List<Staff> getAvailableStaff(@RequestParam String shift) {
 
-		return staffService.findAllAvailable(shiftId);
+		return staffService.findAllAvailable(shift);
 	}
 	
 	@GetMapping("/all")

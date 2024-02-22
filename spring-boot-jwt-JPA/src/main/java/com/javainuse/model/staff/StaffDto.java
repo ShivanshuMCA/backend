@@ -7,7 +7,7 @@ public class StaffDto {
 	private String lastName;
 	private String email;
 	private String phone;
-	private String shiftId;
+	private String shift;
 
 	public Long getId() {
 		return id;
@@ -49,12 +49,12 @@ public class StaffDto {
 		this.phone = phone;
 	}
 
-	public String getShiftId() {
-		return shiftId;
+	public String getShift() {
+		return shift;
 	}
 
-	public void setShiftId(String shiftId) {
-		this.shiftId = shiftId;
+	public void setShift(String shift) {
+		this.shift = shift;
 	}
 
 }
